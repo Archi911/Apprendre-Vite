@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercices - Apprendre Vite</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+</head>
+
+<body>
+    <div id="nav">
+        <h3 class="font-effect-neon">Apprendre vite</h3>
+        <img src="https://www.freepnglogos.com/uploads/eiffel-tower-png/eiffel-tower-north-carolina-world-war-commemoration-dncr-11.png"
+            alt="">
+        <h4><a href="{{ url_for('home') }}">Accueil</a></h4>
+        <h4><a href="{{ url_for('podcasts') }}">Podcasts</a></h4>
+        <h4><a href="{{ url_for('exercices') }}">Exercices</a></h4>
+        <h4><a href="{{ url_for('test_niveau') }}">Test niveau</a></h4>
+    </div>
+    <div class="exercise-section">
+        <h1>📘 Modules d'exercices</h1>
+        <p>Choisissez une catégorie pour pratiquer la grammaire française !</p>
+
+        <div class="modules-container">
+
+            <div class="exercise-box">
+                <h2>🧠 Grammaire de base</h2>
+                <button>Commencer</button>
+            </div>
+
+            <div class="exercise-box">
+                <h2>✨ Adjectifs</h2>
+                <button>Réviser</button>
+            </div>
+
+            <div class="exercise-box">
+                <h2>📍 Prépositions</h2>
+                <button>Étudier</button>
+            </div>
+
+            <div class="exercise-box">
+                <h2>🔗 Pronoms relatifs</h2>
+                <button>Découvrir</button>
+            </div>
+
+            <div class="exercise-box">
+                <h2>🎯 COD / COI</h2>
+                <button>Tester</button>
+            </div>
+
+            <div class="exercise-box">
+                <h2>🗣️ Conjugaisons</h2>
+                <button>Pratiquer</button>
+            </div>
+
+            <div class="exercise-box">
+                <h2>📍 Temps verbaux</h2>
+                <button>Étudier</button>
+            </div>
+
+            <div class="exercise-box">
+                <h2>✨ Articles définis et indéfinis</h2>
+                <button>Réviser</button>
+            </div>
+
+            <div class="exercise-box">
+                <h2>🔗 Négation</h2>
+                <button>Découvrir</button>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

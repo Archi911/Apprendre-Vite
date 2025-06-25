@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcasts - Apprendre Vite</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+</head>
+
+<body>
+    <div id="nav">
+        <h3 class="font-effect-neon">Apprendre vite</h3>
+        <img src="https://www.freepnglogos.com/uploads/eiffel-tower-png/eiffel-tower-north-carolina-world-war-commemoration-dncr-11.png"
+            alt="">
+        <h4><a href="{{ url_for('home') }}">Accueil</a></h4>
+        <h4><a href="{{ url_for('podcasts') }}">Podcasts</a></h4>
+        <h4><a href="{{ url_for('exercices') }}">Exercices</a></h4>
+        <h4><a href="{{ url_for('test_niveau') }}">Test niveau</a></h4>
+    </div>
+    <div class="podcast-section">
+        <h1>🎧 Podcasts pour apprendre le français</h1>
+        <p>Écoutez des histoires et conversations françaises authentiques pour améliorer votre compréhension orale.</p>
+
+        <div class="podcast">
+
+            <img src="{{ url_for('static', filename='morning.jpeg') }}" alt="Podcast 1">
+            <div class="podcast-content">
+                <h2>📌 Podcast 1: Bonjour le matin</h2>
+                <audio controls>
+                    <source src="{{ url_for('static', filename='audio/podcast1.mp3') }}" type="audio/mpeg">
+                    Votre navigateur ne supporte pas l'audio.
+                </audio>
+                <p>Un début de journée typique en France.</p>
+            </div>
+        </div>
+
+        <div class="podcast">
+            <img src="{{ url_for('static', filename='day.jpg') }}" alt="Podcast 3">
+            <div class="podcast-content">
+                <h2>📌 Podcast 2: Une journée à Paris</h2>
+                <audio controls>
+                    <source src="{{ url_for('static', filename='audio/podcast2.mp3') }}" type="audio/mpeg">
+                    Votre navigateur ne supporte pas l'audio.
+                </audio>
+                <p>Explorez les rues de Paris à travers une narration immersive.</p>
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+
+</body>
+
+</html>
