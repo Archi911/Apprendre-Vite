@@ -1,0 +1,314 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'montserrat';
+}
+
+img {
+  height: 75px;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  /* background: url("/static/.jpg") no-repeat center center fixed; */
+  /* background-size: cover; */
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+#nav {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  background: rebeccapurple;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 50px;
+  gap: 30px;
+  position: fixed;
+  z-index: 99;
+}
+
+#nav h4 a {
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+#nav h4 a:hover {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+.font-effect-neon {
+  font-family: "sofia", sans-serif;
+  font-size: 2.5rem;
+  font-weight: lighter;
+}
+
+#nav h4 {
+  text-transform: uppercase;
+  color: white;
+}
+
+#nav-links {
+  display: flex;
+  gap: 30px;
+  left: 90px;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-brand img {
+  height: 60px;
+}
+
+.test-niveau {
+  padding: 140px 40px 60px 40px;
+  background-color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+}
+
+.test-niveau h1 {
+  font-size: 2.3rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.test-niveau p {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  color: #444;
+}
+
+.test-niveau h2 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+.niveau-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 30px;
+}
+
+.niveau-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  width: 360px;
+  height: 360px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s;
+  text-align: left;
+}
+
+.niveau-card:hover {
+  transform: translateY(-5px);
+}
+
+.niveau-card img {
+  width: 100%;
+  height: 70%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.niveau-card .tag {
+  display: inline-block;
+  background-color: rebeccapurple;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.niveau-card h3 {
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.site-footer {
+  margin-top: 20vh;
+  background-color: #222;
+  color: #eee;
+  padding: 40px 50px;
+  font-size: 20px;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  padding-bottom: 3vh;
+}
+
+.footer-column {
+  flex: 1;
+  margin: 10px;
+}
+
+.footer-column h4 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  color: #d5d4d4;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.footer-column ul li a:hover {
+  color: #ffd700;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  font-size: 17px;
+}
+
+#nav .home a {
+  color: #ffd700;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  color: white;
+  font-size: 1.8rem;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  #nav {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .nav-brand {
+    align-items: center;
+    text-align: center;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: rebeccapurple;
+    text-align: center;
+    padding-bottom: 10px;
+    gap: 12px;
+  }
+
+  #nav-links.show {
+    display: flex;
+  }
+
+  #nav h4 {
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  .niveau-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .niveau-card {
+    width: 90%;
+    max-width: 350px;
+    height: auto;
+  }
+
+  .niveau-card img {
+    height: auto;
+  }
+
+  .footer-columns {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-column {
+    margin: 20px 0;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .font-effect-neon {
+    font-size: 1.8rem;
+  }
+
+  #nav {
+    padding: 10px;
+  }
+
+  .test-niveau h1 {
+    font-size: 1.6rem;
+  }
+
+  .test-niveau p,
+  .test-niveau h2 {
+    font-size: 1rem;
+  }
+
+  .niveau-card h3 {
+    font-size: 1rem;
+  }
+
+  .niveau-card {
+    padding: 15px;
+  }
+}
