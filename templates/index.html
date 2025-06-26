@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apprendre Vite</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+
+
+</head>
+
+<body>
+    <div id="nav">
+        <div class="nav-brand">
+            <h3 class="font-effect-neon">Apprendre vite</h3>
+            <img src="https://www.freepnglogos.com/uploads/eiffel-tower-png/eiffel-tower-north-carolina-world-war-commemoration-dncr-11.png"
+                alt="">
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <div id="nav-links">
+            <h4 class="home"><a href="{{ url_for('home') }}">Accueil</a></h4>
+            <h4><a href="{{ url_for('podcasts') }}">Podcasts</a></h4>
+            <h4><a href="{{ url_for('exercices') }}">Exercices</a></h4>
+            <h4><a href="{{ url_for('test_niveau') }}">Test niveau</a></h4>
+
+        </div>
+    </div>
+    <div id="cursor"></div>
+    <div id="cursor-blur"></div>
+    <video autoplay loop muted src="{{ url_for('static', filename='bg.mp4') }}" type="video/mp4"></video>
+    <div id="main" data-scroll-container>
+        <div id="page1">
+            <h1>BONJOUR.APPRENDRE.AIMER.</h1>
+            <h2>Bienvenue sur ce site pour apprendre le francais!</h2>
+            <h3>étudiez et comprenez en écoutant des podcasts, en essayant des exercices amusants selon le niveau et en
+                tentant des tests.</h3>
+        </div>
+        <div id="page2">
+            <div id="scroller">
+                <div id="scroller-in">
+                    <h4>Étudier dur.</h4>
+                    <h4>Ameliorer chaque jour.</h4>
+                    <h4>Être le meilleur.</h4>
+                </div>
+                <div id="scroller-in">
+                    <h4>Étudier dur.</h4>
+                    <h4>Ameliorer chaque jour.</h4>
+                    <h4>Être le meilleur.</h4>
+                </div>
+            </div>
+
+            <div id="home">
+                <img src="https://www.planetware.com/photos-large/F/france-things-to-do-eiffel-tower-sunset.jpg" alt="">
+                <div id="home-in">
+                    <h3>Bienvenue sur Apprendre Vite!</h3>
+                    <p>
+                        Découvrez la beauté de la langue française avec Apprendre Vite, votre plateforme idéale pour
+                        apprendre le français de manière interactive et immersive. Que vous soyez débutant ou que vous
+                        souhaitiez améliorer votre niveau, notre site vous propose :
+                    </p>
+                    <ul>🎧 Des podcasts captivants pour améliorer votre compréhension orale</ul>
+
+                    <ul>📝 Des exercices ludiques adaptés à votre niveau pour enrichir votre vocabulaire et maîtriser la
+                        grammaire</ul>
+
+                    <ul>📊 Des tests de niveau intelligents pour personnaliser votre parcours d’apprentissage</ul>
+
+
+
+                </div>
+
+                <img src="https://cdn.pixabay.com/photo/2013/04/11/19/46/building-102840_1280.jpg" alt="">
+            </div>
+
+            <div id="cards-container">
+
+                <div class="card" id="card1">
+                    <div class="overlay">
+                        <h4><a href="{{ url_for('podcasts') }}">Podcasts</a></h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur quam iure sapiente
+                            mollitia id quas odio dicta! Similique, dignissimos.</p>
+                    </div>
+                </div>
+
+
+
+
+                <div class="card" id="card2">
+                    <div class="overlay">
+                        <h4><a href="{{ url_for('exercices') }}">Exercices</a></h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur quam iure sapiente
+                            mollitia id quas odio dicta! Similique, dignissimos.</p>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="card" id="card3">
+                    <div class="overlay">
+                        <h4><a href="{{ url_for('exercices') }}">Test niveau</a></h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur quam iure sapiente
+                            mollitia id quas odio dicta! Similique, dignissimos.</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div id="purple-div">
+            <img src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/dots-side.svg" alt="" />
+
+            <div class="text-block">
+                <h4>Envie de découvrir les accents francophones?</h4>
+                <h5>Naviguez sur notre carte interactive!</h5>
+            </div>
+
+            <img src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/dots-side.svg" alt="" />
+        </div>
+
+        <div id="page3">
+            <img src="https://thumbs.dreamstime.com/b/checklist-filling-survey-form-online-document-management-system-dms-assessment-form-questionnaire-checklist-quality-281271396.jpg"
+                alt="">
+            <div class="block">
+                <h3>Diplômes et tests de langue</h3>
+                <p>Entraînez-vous gratuitement aux épreuves orales du DELF B2, du TCF et du Diplôme de français
+                    professionnel (DFP) dans les conditions d’examer</p>
+                <button>S'Entraîner</button>
+            </div>
+        </div>
+
+        <div id="page4">
+            <p>"Superbe plateforme pour apprendre le français !"J'adore ce site ! Les exercices sont interactifs, les
+                podcasts sont clairs, et la carte des accents est vraiment originale. Très utile pour progresser
+                rapidement. Bravo !</p>
+            <img id="colon1" src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/quote-left.svg"
+                alt="" />
+            <img id="colon2" src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/quote-right.svg"
+                alt="" />
+        </div>
+
+
+    </div>
+    </div>
+    <footer id="contact-footer">
+        <div class="footer-content">
+            <h2>📩 Contactez-nous</h2>
+            <p>Pour toute question ou suggestion, n’hésitez pas à nous écrire !</p>
+            <p>Email : <a href="mailto:apprendrevite@email.com">apprendrevite@email.com</a></p>
+            <p>📍 Paris, France</p>
+            <div class="socials">
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Twitter"></a>
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+        integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+        integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+
+</body>
+
+</html>
