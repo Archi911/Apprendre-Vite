@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test de Niveau - Apprendre Vite</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style3.css') }}">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+
+</head>
+
+<body>
+  <div id="nav">
+    <div class="nav-brand">
+      <h3 class="font-effect-neon">Apprendre vite</h3>
+      <img
+        src="https://www.freepnglogos.com/uploads/eiffel-tower-png/eiffel-tower-north-carolina-world-war-commemoration-dncr-11.png"
+        alt="">
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <div id="nav-links">
+      <h4><a href="{{ url_for('home') }}">Accueil</a></h4>
+      <h4><a href="{{ url_for('podcasts') }}">Podcasts</a></h4>
+      <h4><a href="{{ url_for('exercices') }}">Exercices</a></h4>
+      <h4 class="home"><a href="{{ url_for('test_niveau') }}">Test niveau</a></h4>
+    </div>
+  </div>
+
+  <section class="test-niveau">
+    <div class="container">
+      <h1>Testez votre niveau</h1>
+      <p>Répondez à quelques questions pour trouver des contenus adaptés à votre niveau.</p>
+
+      <h2>Tous les tests de niveau</h2>
+      <div class="niveau-cards"><a href="">
+          <div class="niveau-card">
+            <img
+              src="https://s.francaisfacile.rfi.fr/media/display/93df9792-db00-11ee-a06e-005056bfb2b6/w:480/p:16x9/B2_logoFEI.webp"
+              alt="Niveau B2">
+            <span class="tag">QUEL EST MON NIVEAU ?</span>
+            <h3>Test de niveau B2 : je communique avec aisance</h3>
+          </div>
+        </a>
+        <a href="">
+          <div class="niveau-card">
+            <img
+              src="https://s.francaisfacile.rfi.fr/media/display/8564a946-db00-11ee-85bf-005056a97e36/w:480/p:16x9/B1_logoFEI.webp"
+              alt="Niveau B1">
+            <span class="tag">QUEL EST MON NIVEAU ?</span>
+            <h3>Test de niveau B1 : je peux communiquer dans un environnement francophone</h3>
+          </div>
+        </a>
+        <a href="">
+          <div class="niveau-card">
+            <img
+              src="https://s.francaisfacile.rfi.fr/media/display/76ee1eec-db00-11ee-b417-005056bfb2b6/w:480/p:16x9/A2_logoFEI.webp"
+              alt="Niveau A2">
+            <span class="tag">QUEL EST MON NIVEAU ?</span>
+            <h3>Test de niveau A2 : je comprends des messages simples</h3>
+          </div>
+        </a>
+        <a href="">
+          <div class="niveau-card">
+            <img
+              src="https://s.francaisfacile.rfi.fr/media/display/6516dec0-db00-11ee-b2d4-005056bfb2b6/w:480/p:16x9/A1_logoFEI.webp"
+              alt="Niveau A1">
+            <span class="tag">QUEL EST MON NIVEAU ?</span>
+            <h3>Test de niveau A1 : je decouvre le francais</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <footer class="site-footer">
+    <div class="footer-columns">
+      <div class="footer-column">
+        <h4>À propos</h4>
+        <ul>
+          <li><a href="{{ url_for('home') }}#page2">Qui sommes-nous ?</a></li>
+          <li><a href="{{ url_for('home') }}#contact-footer">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Ressources</h4>
+        <ul>
+          <li><a href="{{ url_for('podcasts') }}">Podcasts</a></li>
+          <li><a href="{{ url_for('exercices') }}">Exercices</a></li>
+          <li><a href="{{ url_for('test_niveau') }}">Test de niveau</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Suivez-nous</h4>
+        <div class="social-icons">
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Apprendre Vite - Tous droits réservés.</p>
+    </div>
+  </footer>
+  <script>
+    function toggleMenu() {
+      const links = document.getElementById("nav-links");
+      links.classList.toggle("show");
+    }
+  </script>
+
+
+
+</body>
+
+</html>

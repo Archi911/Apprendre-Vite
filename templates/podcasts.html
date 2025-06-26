@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcasts - Apprendre Vite</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+</head>
+
+<body>
+    <div id="nav">
+        <div class="nav-brand">
+            <h3 class="font-effect-neon">Apprendre vite</h3>
+            <img src="https://www.freepnglogos.com/uploads/eiffel-tower-png/eiffel-tower-north-carolina-world-war-commemoration-dncr-11.png"
+                alt="">
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <div id="nav-links">
+            <h4><a href="{{ url_for('home') }}">Accueil</a></h4>
+            <h4><a href="{{ url_for('podcasts') }}" class="a">Podcasts</a></h4>
+            <h4><a href="{{ url_for('exercices') }}">Exercices</a></h4>
+            <h4><a href="{{ url_for('test_niveau') }}">Test niveau</a></h4>
+        </div>
+    </div>
+    <div class="podcast-section">
+        <h1>Apprendre le français en écoutant</h1>
+        <p>Des fictions, des reportages, des émissions, pour se familiariser avec la langue française en immersion
+            sonore.</p>
+    </div>
+    <section class="podcast">
+        <h2>Tous les podcasts</h2>
+        <div class="scroll-wrapper">
+            <button class="scroll-btn left" onclick="scrollPodcastsLeft()">❮</button>
+            <div class="podcast-list" id="podcast-scroll">
+                <a href="">
+                    <div class="podcast-card">
+                        <img src="https://cdn4.vectorstock.com/i/1000x1000/72/08/active-listening-concept-vector-43257208.jpg"
+                            alt="Journal">
+                        <p>Journal en français facile</p>
+                    </div>
+
+                </a>
+                <a href="">
+                    <div class="podcast-card">
+                        <img src="https://tse3.mm.bing.net/th?id=OIP.EFCBzqTRwlWeiUtoMDJmUgHaJB&pid=Api&P=0&h=180"
+                            alt="Un mot">
+                        <p>Un mot, une histoire</p>
+                    </div>
+                </a>
+                <a href="">
+
+                    <div class="podcast-card">
+                        <img src="https://tse3.mm.bing.net/th?id=OIP.BJdqP875wxrfaetZDtjFFAHaEK&pid=Api&P=0&h=180"
+                            alt="La puce">
+                        <p>La Puce à l'oreille</p>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="podcast-card">
+                        <img src="https://tse2.mm.bing.net/th?id=OIP.y3dHSddtOltxCRPsDcKe3AHaEX&pid=Api&P=0&h=180"
+                            alt="Façon de parler">
+                        <p>Façon de parler</p>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="podcast-card">
+                        <img src="https://tse2.mm.bing.net/th?id=OIP.tXQTcn4Ni4pMmuh2zRCN0gHaFF&pid=Api&P=0&h=180"
+                            alt="Les mots JO">
+                        <p>Les mots des JO</p>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="podcast-card">
+                        <img src="https://tenrycolle.com/wp-content/uploads/2022/09/listening-skill-process-1024x1024.jpg"
+                            alt="Les mots actu">
+                        <p>Les mots de l’actu</p>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="podcast-card">
+                        <img src="https://cdn4.vectorstock.com/i/1000x1000/72/08/active-listening-concept-vector-43257208.jpg"
+                            alt="Journal">
+                        <p>Journal en français facile</p>
+                    </div>
+
+                </a>
+                <a href="">
+                    <div class="podcast-card">
+                        <img src="https://tse3.mm.bing.net/th?id=OIP.EFCBzqTRwlWeiUtoMDJmUgHaJB&pid=Api&P=0&h=180"
+                            alt="Un mot">
+                        <p>Un mot, une histoire</p>
+                    </div>
+                </a>
+                <a href="">
+
+                    <div class="podcast-card">
+                        <img src="https://tse3.mm.bing.net/th?id=OIP.BJdqP875wxrfaetZDtjFFAHaEK&pid=Api&P=0&h=180"
+                            alt="La puce">
+                        <p>La Puce à l'oreille</p>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="podcast-card">
+                        <img src="https://tse2.mm.bing.net/th?id=OIP.y3dHSddtOltxCRPsDcKe3AHaEX&pid=Api&P=0&h=180"
+                            alt="Façon de parler">
+                        <p>Façon de parler</p>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="podcast-card">
+                        <img src="https://tse2.mm.bing.net/th?id=OIP.tXQTcn4Ni4pMmuh2zRCN0gHaFF&pid=Api&P=0&h=180"
+                            alt="Les mots JO">
+                        <p>Les mots des JO</p>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="podcast-card">
+                        <img src="https://tenrycolle.com/wp-content/uploads/2022/09/listening-skill-process-1024x1024.jpg"
+                            alt="Les mots actu">
+                        <p>Les mots de l’actu</p>
+                    </div>
+                </a>
+            </div>
+
+            <button class="scroll-btn right" onclick="scrollPodcastsRight()">❯</button>
+        </div>
+    </section>
+    <footer class="site-footer">
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h4>À propos</h4>
+                <ul>
+                    <li><a href="{{ url_for('home') }}#page2">Qui sommes-nous ?</a></li>
+                    <li><a href="{{ url_for('home') }}#contact-footer">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Ressources</h4>
+                <ul>
+                    <li><a href="{{ url_for('podcasts') }}">Podcasts</a></li>
+                    <li><a href="{{ url_for('exercices') }}">Exercices</a></li>
+                    <li><a href="{{ url_for('test_niveau') }}">Test de niveau</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Suivez-nous</h4>
+                <div class="social-icons">
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Apprendre Vite - Tous droits réservés.</p>
+        </div>
+    </footer>
+
+
+    <script>
+        function scrollPodcastsLeft() {
+            console.log("Left button clicked!");
+
+            const scrollContainer = document.getElementById('podcast-scroll');
+            scrollContainer.scrollBy({ left: -300, behavior: 'smooth' });
+        }
+
+        function scrollPodcastsRight() {
+            console.log("Right button clicked!");
+            const scrollContainer = document.getElementById('podcast-scroll');
+            scrollContainer.scrollBy({ left: 300, behavior: 'smooth' });
+        }
+        function toggleMenu() {
+            const links = document.getElementById("nav-links");
+            links.classList.toggle("show");
+        }
+    </script>
+
+</body>
+
+</html>
