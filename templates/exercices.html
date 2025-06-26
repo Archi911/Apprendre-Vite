@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercices - Apprendre Vite</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+</head>
+
+<body>
+    <div id="nav">
+        <div class="nav-brand">
+            <h3 class="font-effect-neon">Apprendre vite</h3>
+            <img src="https://www.freepnglogos.com/uploads/eiffel-tower-png/eiffel-tower-north-carolina-world-war-commemoration-dncr-11.png"
+                alt="">
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <div id="nav-links">
+            <h4><a href="{{ url_for('home') }}">Accueil</a></h4>
+            <h4><a href="{{ url_for('podcasts') }}">Podcasts</a></h4>
+            <h4 class="home"><a href="{{ url_for('exercices') }}">Exercices</a></h4>
+            <h4><a href="{{ url_for('test_niveau') }}">Test niveau</a></h4>
+        </div>
+    </div>
+    <div class="exercise-section">
+        <h1>Modules d'exercices</h1>
+        <p>Choisissez une catégorie pour pratiquer la grammaire française !</p>
+
+        <div class="modules-container">
+            <div class="exercise-box">
+                <label><input type="checkbox" class="module-checkbox" data-id="module1"> 🧠 Grammaire de base</label>
+                <button>Commencer</button>
+            </div>
+            <div class="exercise-box">
+                <label><input type="checkbox" class="module-checkbox" data-id="module2"> ✨ Adjectifs</label>
+                <button>Réviser</button>
+            </div>
+            <div class="exercise-box">
+                <label><input type="checkbox" class="module-checkbox" data-id="module3"> 📍 Prépositions</label>
+                <button>Étudier</button>
+            </div>
+            <div class="exercise-box">
+                <label><input type="checkbox" class="module-checkbox" data-id="module4"> 🔗 Pronoms relatifs</label>
+                <button>Découvrir</button>
+            </div>
+            <div class="exercise-box">
+                <label><input type="checkbox" class="module-checkbox" data-id="module5"> 🎯 COD / COI</label>
+                <button>Tester</button>
+            </div>
+            <div class="exercise-box">
+                <label><input type="checkbox" class="module-checkbox" data-id="module6"> 🗣️ Conjugaisons</label>
+                <button>Pratiquer</button>
+            </div>
+            <div class="exercise-box">
+                <label><input type="checkbox" class="module-checkbox" data-id="module7"> 📍 Temps verbaux</label>
+                <button>Étudier</button>
+            </div>
+            <div class="exercise-box">
+                <label><input type="checkbox" class="module-checkbox" data-id="module8"> ✨ Articles définis et
+                    indéfinis</label>
+                <button>Réviser</button>
+            </div>
+            <div class="exercise-box">
+                <label><input type="checkbox" class="module-checkbox" data-id="module9"> 🔗 Négation</label>
+                <button>Découvrir</button>
+            </div>
+        </div>
+    </div>
+    <footer class="site-footer">
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h4>À propos</h4>
+                <ul>
+                    <li><a href="{{ url_for('home') }}#page2">Qui sommes-nous ?</a></li>
+                    <li><a href="{{ url_for('home') }}#contact-footer">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Ressources</h4>
+                <ul>
+                    <li><a href="{{ url_for('podcasts') }}">Podcasts</a></li>
+                    <li><a href="{{ url_for('exercices') }}">Exercices</a></li>
+                    <li><a href="{{ url_for('test_niveau') }}">Test de niveau</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Suivez-nous</h4>
+                <div class="social-icons">
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Apprendre Vite - Tous droits réservés.</p>
+        </div>
+    </footer>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const checkboxes = document.querySelectorAll('.module-checkbox');
+
+            checkboxes.forEach((checkbox) => {
+                const id = checkbox.getAttribute('data-id');
+
+                if (localStorage.getItem(id) === 'completed') {
+                    checkbox.checked = true;
+                    checkbox.closest('.exercise-box').classList.add('completed');
+                }
+
+                checkbox.addEventListener('change', () => {
+                    if (checkbox.checked) {
+                        localStorage.setItem(id, 'completed');
+                        checkbox.closest('.exercise-box').classList.add('completed');
+                    } else {
+                        localStorage.removeItem(id);
+                        checkbox.closest('.exercise-box').classList.remove('completed');
+                    }
+                });
+            });
+
+        });
+
+        function toggleMenu() {
+            const links = document.getElementById("nav-links");
+            links.classList.toggle("show");
+        }
+    </script>
+
+</body>
+
+</html>
